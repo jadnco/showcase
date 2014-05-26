@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Add a trailing slash
+RewriteCond %{REQUEST_URI} !(/$|\.)
+RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
+
+# Rewrite the index page; pass the page GET variable
+RewriteRule ^.?$ public/index.php [L]
+RewriteRule ^page/([^/\.]+)/$ public/index.php?page=$1 [L]
+
+# Rewrite the setup page
+RewriteRule ^setup/$ public/setup.php [L]
+
+# Rewrite the login page
+RewriteRule ^login/$ public/login.php [L]
+
+# Rewrite the add project page
+RewriteRule ^add/$ public/add.php [L]
+
+# Rewrite the logout page
+RewriteRule ^logout/$ public/logout.php [L]
