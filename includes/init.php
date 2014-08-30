@@ -9,11 +9,11 @@ define("PROJECTS_JSON", "../projects.json");
 define("ACTIVITY_LOG", "../activity.log");
 
 // Get ROOT_PATH by calling __DIR__ (without /public)
-if (!defined("ROOT_PATH")) define("ROOT_PATH", "/Applications/XAMPP/xamppfiles/htdocs/showcase");
-if (!defined("INC_PATH"))  define("INC_PATH", ROOT_PATH . "/includes/");
+define("ROOT_PATH", "/Applications/XAMPP/xamppfiles/htdocs/showcase");
+define("INC_PATH", ROOT_PATH . "/includes/");
 
 // Base url (public folder); eg. http://example.com/public
-if (!defined("BASE_URL"))  define("BASE_URL", "http://localhost/showcase/public");
+define("BASE_URL", "http://localhost/showcase/public");
 
 // Add the home url; eg. http://example.com
 define("HOME", "http://localhost/showcase");
