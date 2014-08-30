@@ -16,4 +16,10 @@ define("BASE_URL", "http://localhost/showcase/public");
 define("HOME", "http://localhost/showcase");
 ```
 
+You then must edit line 95 in `public/assets/js/admin.js`:
+
+```javascript
+var base_url = "http://localhost/showcase/public";
+```
+
 *Vector icons from [Graphicburger](http://graphicburger.com)*
