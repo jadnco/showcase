@@ -32,6 +32,6 @@
 
 		<?php if (is_admin()) { ?>
 		<a class="logout" href="<?=HOME?>/logout">Logout</a>
-		<?php } ?> <?php elseif ($page != "login" && $page != "setup" && !is_admin()) { ?>
+		<?php } elseif ($page != "login" && $page != "setup" && !is_admin()) { ?>
 		<a class="login" href="<?=HOME?>/login">Login</a>
 		<?php } ?>

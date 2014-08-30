@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 // Create new constants for dependent json files
 define("USER_JSON", "../user.json");
 define("PROJECTS_JSON", "../projects.json");
@@ -7,14 +9,14 @@ define("PROJECTS_JSON", "../projects.json");
 define("ACTIVITY_LOG", "../activity.log");
 
 // Get ROOT_PATH by calling __DIR__ (without /public)
-if (!defined("ROOT_PATH")) define("ROOT_PATH", "");
+if (!defined("ROOT_PATH")) define("ROOT_PATH", "/Applications/XAMPP/xamppfiles/htdocs/showcase");
 if (!defined("INC_PATH"))  define("INC_PATH", ROOT_PATH . "/includes/");
 
 // Base url (public folder); eg. http://example.com/public
-if (!defined("BASE_URL"))  define("BASE_URL", "");
+if (!defined("BASE_URL"))  define("BASE_URL", "http://localhost/showcase/public");
 
 // Add the home url; eg. http://example.com
-define("HOME", "");
+define("HOME", "http://localhost/showcase");
 
 // Timezone
 date_default_timezone_set("America/Winnipeg");

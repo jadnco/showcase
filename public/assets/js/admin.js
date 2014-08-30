@@ -92,8 +92,8 @@ $(document).ready(function() {
 function delete_project(projectId, projectTitle, refPage) {
 	if (confirm("Do you really want to delete \"" + projectTitle + "\"?")) {
 		// Manually insert BASE_URL constant
-		var base_url = "";
-		
+		var base_url = "http://localhost/showcase/public";
+
 		window.location.replace(base_url+"/delete.php?project=" + projectId + "&ref=" + refPage);
 	} else {
 		return false;

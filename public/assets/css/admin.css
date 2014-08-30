@@ -25,6 +25,7 @@
 
 #add-project .hover .upload-percent { width: 0; background: #000; position: absolute; bottom: 0; height: 100%; border-top-left-radius: 5px; border-bottom-left-radius: 5px;}
 #add-project .hover .upload-percent.full { border-radius: 5px; }
+#add-project .hover { border-radius: 10px; }
 
 #add-project .project-link-wrap { width: 250px; float: right;}
 #add-project input[type="text"].project-title { text-align: center; position: absolute; left: 0; right: 0; z-index: 1; width: 100%; bottom: -28px; border: 0; outline: 0; font: 16px "Avenir Next", "Avenir", "Helvetica Neue", helvetica, sans-serif; }
@@ -42,5 +43,5 @@
 
 #add-project .input-icon { width: 34px; height: 34px; background-repeat: no-repeat !important; background-size: 90% !important; margin-bottom: 10px !important; position: relative; float: left; padding: 5px 5px; }
 #add-project .input-icon.behance { margin-top: 5px; background: #000 url(../images/behance-icon.svg) 3px -4px; }
-#add-project .input-icon.dribbble { margin-top: 0px; background: #000 url(../images/dribbble-icon.svg) 2px -5px; }
+#add-project .input-icon.dribbble { margin-top: 0px; background: #000 url(../images/dribbble-icon.svg) 2px -6px; }
 #add-project .input-icon.direct { margin-top: 0px; background: #000 url(../images/eye-icon.svg) 2px -6px; }

@@ -283,10 +283,10 @@ function get_thumb_name($id) {
 
 function get_thumb_url($id) {
     $id--;
-    $thumb = glob("./assets/images/thumb-{$id}.*");
+    $thumb = glob("../public/assets/images/thumb-{$id}.*");
 
     if (array_key_exists(0, $thumb)) {
-        $thumb_url = "http:" . BASE_URL . substr($thumb[0], 1);
+        $thumb_url = substr($thumb[0], 1);
 
         return $thumb_url;
     }
@@ -440,7 +440,8 @@ function all_published() {
         return $projects;
     }
 
-    return false;
+    // return empty array if there are no projects
+    return array();
 }
 
 // Return array of all projects
@@ -452,7 +453,7 @@ function all_projects() {
         return $json_contents;
     }
 
-    return false;
+    return array();
 }
 
 function pagination($page, $return_value) {
@@ -537,7 +538,7 @@ function upload_thumb($id, $file = array()) {
 
         // Build the target path
         $target_path = $upload_dir . $filename;
-        $image_path = "http:" . BASE_URL . "/assets/images/" . $filename;
+        $image_path = BASE_URL . "/assets/images/" . $filename;
 
         if ($file["size"] <= size($max_thumb_size)) {
             if (in_array($extension, $thumb_exts)) {

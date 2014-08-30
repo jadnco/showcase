@@ -25,27 +25,29 @@
 </article>
 <?php } ?>
 
-<?php foreach (pagination($page_num, "project") as $project => $id) { ?>
-<article class="project <?=(!is_published($id)) ? "not-published" : ""?>" style="background-image: url(<?=project($id, "thumb")?>);">
-	<div class="hover">
-		<div class="hover-inner <?=count_links($id)?>">
-			<?php if (project($id, "dribbble")) { ?>
-				<a href="<?=project($id, "dribbble")?>" class="icon-dribbble" title="View on Dribbble"></a>
-			<?php } ?>
-			<?php if (project($id, "behance")) { ?>
-				<a href="<?=project($id, "behance")?>" class="icon-behance" title="View on Behance"></a>
-			<?php } ?>
-			<?php if (project($id, "direct_url")) { ?>
-				<a href="<?=project($id, "direct_url")?>" class="icon-eye" title="View website"></a>
-			<?php } ?>
-			<?php if (is_admin()) { ?>
-				<a href="javascript:void(0);" class="icon-trash" onclick="delete_project(<?=$id?>, '<?=project($id, "title")?>', <?=$page_num?>)" title="Delete project"></a>
-			<?php } ?>
+<?php if (all_published()) { ?>
+	<?php foreach (pagination($page_num, "project") as $project => $id) { ?>
+	<article class="project <?=(!is_published($id)) ? "not-published" : ""?>" style="background-image: url(<?=project($id, "thumb")?>);">
+		<div class="hover">
+			<div class="hover-inner <?=count_links($id)?>">
+				<?php if (project($id, "dribbble")) { ?>
+					<a href="http://<?=project($id, "dribbble")?>" class="icon-dribbble" title="View on Dribbble"></a>
+				<?php } ?>
+				<?php if (project($id, "behance")) { ?>
+					<a href="http://<?=project($id, "behance")?>" class="icon-behance" title="View on Behance"></a>
+				<?php } ?>
+				<?php if (project($id, "direct_url")) { ?>
+					<a href="http://<?=project($id, "direct_url")?>" class="icon-eye" title="View website"></a>
+				<?php } ?>
+				<?php if (is_admin()) { ?>
+					<a href="javascript:void(0);" class="icon-trash" onclick="delete_project(<?=$id?>, '<?=project($id, "title")?>', <?=$page_num?>)" title="Delete project"></a>
+				<?php } ?>
+			</div>
+			<div class="date">Posted <?=project($id, "date")?></div>
 		</div>
-		<div class="date">Posted <?=project($id, "date")?></div>
-	</div>
-	<div class="project-title"><?=project($id, "title")?></div>
-</article>
+		<div class="project-title"><?=project($id, "title")?></div>
+	</article>
+	<?php } ?>
 <?php } ?>
 
 <?php if (!all_published()) { ?>
@@ -63,6 +65,5 @@
 <?php } ?>
 
 <section>
-<?php } ?>
 
 <?php include(layout("footer.php")); ?>
