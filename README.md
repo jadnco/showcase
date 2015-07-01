@@ -24,4 +24,6 @@ var base_url = "http://localhost/showcase/public";
 
 All user and project data is stored within `JSON` files, which are automatically created as you create your login. These files are given a `CHMOD` flag of `0600` for security measures.
 
-Check out the [Dribbble](https://dribbble.com/jaden/projects/229448-Showcase) project if you want to see what *Showcase* looks like.
+![Showcase](https://d13yacurqjgara.cloudfront.net/users/347028/screenshots/1705398/showcase-dr-1.png)
+
+Check out the [Dribbble](https://dribbble.com/jaden/projects/229448-Showcase) project if you want to see more of what *Showcase* looks like.
